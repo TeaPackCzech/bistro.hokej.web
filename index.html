@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bistro Hokej Polička | Objednat jídlo k vyzvednutí</title>
+  <meta name="description" content="Demo návrh moderního webu pro Bistro Hokej Polička. Přehledné menu, online objednávka jídla s sebou a připravený platební krok pro vyzvednutí na místě.">
+  <meta name="keywords" content="Bistro Hokej Polička, bistro Polička, restaurace Polička, jídlo s sebou Polička, objednat jídlo Polička, oběd Polička, Dolní Předměstí Polička">
+  <meta name="theme-color" content="#8b1014">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bistro Hokej Polička | Demo web s online objednávkou">
+  <meta property="og:description" content="Moderní prezentační web pro Bistro Hokej v Poličce s demo objednávkou jídla k vyzvednutí.">
+  <meta property="og:url" content="https://teapackczech.github.io/bistro.hokej.web/">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="canonical" href="https://teapackczech.github.io/bistro.hokej.web/">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bistro Hokej",
+    "description": "Bistro / restaurace v lokalitě Polička, Dolní Předměstí. Demo web s připravenou online objednávkou jídla k vyzvednutí.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vrchlického 19",
+      "addressLocality": "Polička",
+      "addressRegion": "Pardubický kraj",
+      "postalCode": "572 01",
+      "addressCountry": "CZ"
+    },
+    "telephone": "+420773685507",
+    "servesCuisine": "Bistro",
+    "priceRange": "$$",
+    "url": "https://teapackczech.github.io/bistro.hokej.web/",
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:30", "closes": "22:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "21:00"}
+    ],
+    "potentialAction": {
+      "@type": "OrderAction",
+      "target": "https://teapackczech.github.io/bistro.hokej.web/#objednat",
+      "deliveryMethod": "https://schema.org/OnSitePickup"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Přejít na obsah</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Bistro Hokej domů">
+        <span class="brand-mark" aria-hidden="true">BH</span>
+        <span>Bistro Hokej</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
+        <a href="#menu">Menu</a>
+        <a href="#objednat">Objednat</a>
+        <a href="#jak-to-funguje">Jak to funguje</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="#objednat">Objednat jídlo</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Polička - Dolní Předměstí</p>
+          <h1>Bistro Hokej Polička</h1>
+          <p class="hero-lead">Rychlé dobré jídlo k vyzvednutí. Objednejte online, zaplaťte kartou a vyzvedněte na místě bez čekání.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large" href="#objednat">Objednat k vyzvednutí</a>
+            <a class="btn btn-secondary btn-large" href="#menu">Zobrazit menu</a>
+          </div>
+          <div class="benefits" aria-label="Hlavní benefity">
+            <span>Objednávka online</span>
+            <span>Vyzvednutí na místě</span>
+            <span>Platba kartou připravena</span>
+            <span>Polička - Dolní Předměstí</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="plate-card">
+            <div class="plate">
+              <span class="steam steam-one"></span>
+              <span class="steam steam-two"></span>
+              <span class="food-dot dot-one"></span>
+              <span class="food-dot dot-two"></span>
+              <span class="food-dot dot-three"></span>
+            </div>
+            <div class="ticket">
+              <span>Online objednávka</span>
+              <strong>Vyzvednutí bez čekání</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-band">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">Lokální gastro web</p>
+          <h2>Jednoduchý web, který rovnou prodává obědy s sebou.</h2>
+        </div>
+        <p>Demo je navržené pro malé bistro v Poličce: rychlé načtení, přehledné menu, objednávka k vyzvednutí a připravený platební krok pro Stripe, GoPay nebo Comgate v ostré verzi.</p>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Ukázkové demo menu</p>
+          <h2>Menu k rychlé objednávce</h2>
+          <p>Položky níže jsou pouze návrh pro prezentaci. Reálná nabídka, alergeny a ceny budou doplněny provozovatelem.</p>
+        </div>
+        <div class="menu-tabs" role="tablist" aria-label="Kategorie menu">
+          <button class="category-tab is-active" type="button" data-category="all">Vše</button>
+          <button class="category-tab" type="button" data-category="main">Hlavní jídla</button>
+          <button class="category-tab" type="button" data-category="lunch">Rychlé obědy</button>
+          <button class="category-tab" type="button" data-category="soup">Polévky</button>
+          <button class="category-tab" type="button" data-category="drink">Nápoje</button>
+          <button class="category-tab" type="button" data-category="side">Extra přílohy</button>
+        </div>
+        <div class="menu-grid" id="menu-items" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section order-section" id="objednat">
+      <div class="container order-layout">
+        <div class="order-main">
+          <div class="section-heading align-left">
+            <p class="eyebrow">Online objednávka</p>
+            <h2>Objednat jídlo k vyzvednutí</h2>
+            <p>Vyberte položky z demo menu, zadejte kontakt a projděte ukázkovým platebním krokem.</p>
+          </div>
+
+          <form class="order-form" id="order-form" novalidate>
+            <fieldset>
+              <legend>Kontakt zákazníka</legend>
+              <div class="form-grid">
+                <label>
+                  Jméno
+                  <input id="customer-name" name="name" type="text" autocomplete="name" required placeholder="Jan Novák">
+                </label>
+                <label>
+                  Telefon
+                  <input id="customer-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+420 777 000 000">
+                </label>
+                <label>
+                  E-mail volitelně
+                  <input id="customer-email" name="email" type="email" autocomplete="email" placeholder="jan@example.cz">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Čas vyzvednutí</legend>
+              <div class="pickup-options" role="radiogroup" aria-label="Čas vyzvednutí">
+                <label><input type="radio" name="pickup" value="Co nejdříve" required> Co nejdříve</label>
+                <label><input type="radio" name="pickup" value="Za 20 minut"> Za 20 minut</label>
+                <label><input type="radio" name="pickup" value="Za 30 minut"> Za 30 minut</label>
+                <label><input type="radio" name="pickup" value="Za 45 minut"> Za 45 minut</label>
+                <label><input type="radio" name="pickup" value="Vlastní čas" id="pickup-custom-radio"> Vlastní čas</label>
+              </div>
+              <label class="custom-time is-hidden" id="custom-time-wrap">
+                Vlastní čas
+                <input id="pickup-custom-time" name="pickupCustomTime" type="time">
+              </label>
+            </fieldset>
+
+            <label>
+              Poznámka k objednávce
+              <textarea id="order-note" name="note" rows="4" placeholder="Například méně pálivé, bez cibule..."></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-large" id="checkout-button" type="submit">Zaplatit kartou online</button>
+              <p class="form-hint" id="form-message" role="status" aria-live="polite">Nejdříve přidejte alespoň jednu položku do košíku.</p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="cart-panel" aria-labelledby="cart-title">
+          <div class="cart-header">
+            <div>
+              <p class="eyebrow">Košík</p>
+              <h2 id="cart-title">Vaše objednávka</h2>
+            </div>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+          <div class="cart-empty" id="cart-empty">
+            <strong>Košík je zatím prázdný</strong>
+            <p>Vyberte si položku z demo menu a přidejte ji do objednávky.</p>
+          </div>
+          <div class="cart-items" id="cart-items"></div>
+          <div class="cart-total">
+            <span>Celkem</span>
+            <strong id="cart-total">0 Kč</strong>
+          </div>
+          <a class="btn btn-secondary full-width" href="#menu">Přidat další jídlo</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section steps" id="jak-to-funguje">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Jak to funguje</p>
+          <h2>Čtyři kroky bez čekání u telefonu</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span>01</span>
+            <h3>Vyberete jídlo</h3>
+            <p>Zákazník projde menu a přidá položky do košíku.</p>
+          </article>
+          <article class="step-card">
+            <span>02</span>
+            <h3>Zadáte kontakt a čas</h3>
+            <p>Formulář pohlídá jméno, telefon a požadované vyzvednutí.</p>
+          </article>
+          <article class="step-card">
+            <span>03</span>
+            <h3>Zaplatíte online kartou</h3>
+            <p>Ostrá verze přesměruje na zabezpečenou platební bránu.</p>
+          </article>
+          <article class="step-card">
+            <span>04</span>
+            <h3>Vyzvednete v Bistru Hokej</h3>
+            <p>Objednávka je připravená na místě ve zvoleném čase.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section owner-section">
+      <div class="container owner-grid">
+        <div>
+          <p class="eyebrow">Pro provozovatele</p>
+          <h2>Objednávky přímo přes vlastní web</h2>
+          <p>Vlastní web může být jednoduchý, rychlý a obchodně užitečný. Neřeší jen prezentaci, ale i reálné objednávky s přímým kontaktem na zákazníka.</p>
+        </div>
+        <ul class="owner-list">
+          <li>Zákazník nemusí hledat telefon</li>
+          <li>Menu je přehledně online</li>
+          <li>Objednávka přijde přímo provozovateli</li>
+          <li>Možnost platby předem</li>
+          <li>Méně čekání u pultu</li>
+          <li>Nezávislost na cizích platformách</li>
+          <li>Lepší dohledatelnost na Googlu</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="kontakt">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Bistro Hokej</h2>
+          <p class="contact-lead">Bistro / restaurace v lokalitě Polička, Dolní Předměstí. Tento web je nový návrh webu s online objednávkou.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://mapy.com/zakladni?q=Vrchlick%C3%A9ho%2019%2C%20572%2001%20Poli%C4%8Dka" target="_blank" rel="noopener">Zobrazit na mapě</a>
+            <a class="btn btn-secondary" href="tel:+420773685507">Zavolat</a>
+            <a class="btn btn-secondary" href="#objednat">Objednat jídlo</a>
+          </div>
+        </div>
+        <dl class="contact-card">
+          <div>
+            <dt>Adresa</dt>
+            <dd>Vrchlického 19, 572 01 Polička, Dolní Předměstí</dd>
+          </div>
+          <div>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+420773685507">+420 773 685 507</a></dd>
+          </div>
+          <div>
+            <dt>Otevírací doba</dt>
+            <dd>Po-Pá 9:30-22:00, So 10:00-22:00, Ne 10:00-21:00</dd>
+          </div>
+          <div>
+            <dt>Web</dt>
+            <dd>Nový návrh webu</dd>
+          </div>
+          <div>
+            <dt>Zdroj veřejných údajů</dt>
+            <dd>Firmy.cz a veřejné katalogové profily. Menu je ukázkové demo.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section seo-text">
+      <div class="container">
+        <h2>Bistro Polička s objednávkou jídla s sebou</h2>
+        <p>Bistro Hokej Polička může mít vlastní rychlý web pro zákazníky, kteří hledají bistro Polička, restaurace Polička, oběd Polička nebo objednat jídlo Polička. Demo počítá s vyzvednutím v lokalitě Dolní Předměstí Polička a s jednoduchým procesem od výběru jídla po online platbu.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-cart-bar" aria-hidden="false">
+    <button class="btn btn-primary full-width" type="button" id="mobile-cart-button">
+      Košík <span id="mobile-cart-total">0 Kč</span>
+    </button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="modal-backdrop" id="payment-modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+      <button class="modal-close" type="button" id="modal-close" aria-label="Zavřít platební okno">×</button>
+      <p class="eyebrow">Platební krok</p>
+      <h2 id="payment-title">Demo platební brána</h2>
+      <div class="payment-summary" id="payment-summary"></div>
+      <p>V ostré verzi bude zákazník přesměrován na zabezpečenou platební bránu Stripe / GoPay / Comgate.</p>
+      <div class="modal-actions">
+        <button class="btn btn-primary" type="button" id="simulate-payment">Simulovat úspěšnou platbu</button>
+        <button class="btn btn-secondary" type="button" id="modal-cancel">Zpět k objednávce</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="success-modal" aria-hidden="true">
+    <div class="modal success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
+      <button class="modal-close" type="button" id="success-close" aria-label="Zavřít potvrzení">×</button>
+      <p class="eyebrow">Objednávka přijata</p>
+      <h2 id="success-title">Objednávka byla přijata.</h2>
+      <p>Připravíme ji k vyzvednutí ve zvoleném čase.</p>
+      <a class="btn btn-primary" href="#menu" id="new-order">Vytvořit novou objednávku</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Bistro Hokej Polička</strong> - demo prezentační web s online objednávkou.</p>
+      <p>Tento web je ukázkový návrh. Reálné menu, ceny, otevírací doba a platební brána budou doplněny před ostrým spuštěním.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
