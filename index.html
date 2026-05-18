@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bistro Hokej Polička | Objednat jídlo k vyzvednutí</title>
-  <meta name="description" content="Demo návrh moderního webu pro Bistro Hokej Polička. Přehledné menu, online objednávka jídla s sebou a připravený platební krok pro vyzvednutí na místě.">
-  <meta name="keywords" content="Bistro Hokej Polička, bistro Polička, restaurace Polička, jídlo s sebou Polička, objednat jídlo Polička, oběd Polička, Dolní Předměstí Polička">
-  <meta name="theme-color" content="#8b1014">
+  <title>Bistro Hokej Polička | Asijské bistro a jídlo k vyzvednutí</title>
+  <meta name="description" content="Demo návrh moderního asijského webu pro Bistro Hokej Polička. Přehledné wok menu, online objednávka jídla s sebou a připravený platební krok pro vyzvednutí na místě.">
+  <meta name="keywords" content="Bistro Hokej Polička, asijské bistro Polička, bistro Polička, restaurace Polička, jídlo s sebou Polička, objednat jídlo Polička, oběd Polička, Dolní Předměstí Polička">
+  <meta name="theme-color" content="#a20f18">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Bistro Hokej Polička | Demo web s online objednávkou">
-  <meta property="og:description" content="Moderní prezentační web pro Bistro Hokej v Poličce s demo objednávkou jídla k vyzvednutí.">
+  <meta property="og:title" content="Bistro Hokej Polička | Asijské demo bistro s online objednávkou">
+  <meta property="og:description" content="Moderní asijsky laděný prezentační web pro Bistro Hokej v Poličce s demo objednávkou jídla k vyzvednutí.">
   <meta property="og:url" content="https://teapackczech.github.io/bistro.hokej.web/">
   <meta property="og:locale" content="cs_CZ">
   <link rel="canonical" href="https://teapackczech.github.io/bistro.hokej.web/">
@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Bistro Hokej",
-    "description": "Bistro / restaurace v lokalitě Polička, Dolní Předměstí. Demo web s připravenou online objednávkou jídla k vyzvednutí.",
+    "description": "Asijsky laděné bistro / restaurace v lokalitě Polička, Dolní Předměstí. Demo web s připravenou online objednávkou jídla k vyzvednutí.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Vrchlického 19",
@@ -29,7 +29,7 @@
       "addressCountry": "CZ"
     },
     "telephone": "+420773685507",
-    "servesCuisine": "Bistro",
+    "servesCuisine": ["Asian", "Bistro"],
     "priceRange": "$$",
     "url": "https://teapackczech.github.io/bistro.hokej.web/",
     "openingHoursSpecification": [
@@ -73,32 +73,37 @@
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Polička - Dolní Předměstí</p>
+          <p class="eyebrow">Asijské bistro v Poličce</p>
           <h1>Bistro Hokej Polička</h1>
-          <p class="hero-lead">Rychlé dobré jídlo k vyzvednutí. Objednejte online, zaplaťte kartou a vyzvedněte na místě bez čekání.</p>
+          <p class="hero-lead">Rychlé asijské jídlo k vyzvednutí. Objednejte online, zaplaťte kartou a vyzvedněte na místě bez čekání.</p>
           <div class="hero-actions">
             <a class="btn btn-primary btn-large" href="#objednat">Objednat k vyzvednutí</a>
             <a class="btn btn-secondary btn-large" href="#menu">Zobrazit menu</a>
           </div>
           <div class="benefits" aria-label="Hlavní benefity">
+            <span>Asijské wok menu</span>
             <span>Objednávka online</span>
             <span>Vyzvednutí na místě</span>
             <span>Platba kartou připravena</span>
-            <span>Polička - Dolní Předměstí</span>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="plate-card">
-            <div class="plate">
+          <div class="bowl-card">
+            <div class="chopsticks"></div>
+            <div class="bowl">
               <span class="steam steam-one"></span>
               <span class="steam steam-two"></span>
-              <span class="food-dot dot-one"></span>
-              <span class="food-dot dot-two"></span>
-              <span class="food-dot dot-three"></span>
+              <span class="steam steam-three"></span>
+              <span class="noodle noodle-one"></span>
+              <span class="noodle noodle-two"></span>
+              <span class="ingredient dot-one"></span>
+              <span class="ingredient dot-two"></span>
+              <span class="ingredient dot-three"></span>
+              <span class="ingredient leaf-one"></span>
             </div>
             <div class="ticket">
-              <span>Online objednávka</span>
-              <strong>Vyzvednutí bez čekání</strong>
+              <span>Wok • nudle • rýže</span>
+              <strong>Asie s sebou bez čekání</strong>
             </div>
           </div>
         </div>
@@ -108,18 +113,18 @@
     <section class="section intro-band">
       <div class="container intro-grid">
         <div>
-          <p class="eyebrow">Lokální gastro web</p>
-          <h2>Jednoduchý web, který rovnou prodává obědy s sebou.</h2>
+          <p class="eyebrow">Asijský gastro web</p>
+          <h2>Vizuál, který hned připomene wok, nudle a rychlý oběd s sebou.</h2>
         </div>
-        <p>Demo je navržené pro malé bistro v Poličce: rychlé načtení, přehledné menu, objednávka k vyzvednutí a připravený platební krok pro Stripe, GoPay nebo Comgate v ostré verzi.</p>
+        <p>Demo je navržené pro asijské bistro v Poličce: rychlé načtení, přehledné menu, objednávka k vyzvednutí a připravený platební krok pro Stripe, GoPay nebo Comgate v ostré verzi.</p>
       </div>
     </section>
 
     <section class="section" id="menu">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Ukázkové demo menu</p>
-          <h2>Menu k rychlé objednávce</h2>
+          <p class="eyebrow">Ukázkové asijské demo menu</p>
+          <h2>Wok menu k rychlé objednávce</h2>
           <p>Položky níže jsou pouze návrh pro prezentaci. Reálná nabídka, alergeny a ceny budou doplněny provozovatelem.</p>
         </div>
         <div class="menu-tabs" role="tablist" aria-label="Kategorie menu">
@@ -140,7 +145,7 @@
           <div class="section-heading align-left">
             <p class="eyebrow">Online objednávka</p>
             <h2>Objednat jídlo k vyzvednutí</h2>
-            <p>Vyberte položky z demo menu, zadejte kontakt a projděte ukázkovým platebním krokem.</p>
+            <p>Vyberte nudle, rýžovou misku nebo polévku z demo menu, zadejte kontakt a projděte ukázkovým platebním krokem.</p>
           </div>
 
           <form class="order-form" id="order-form" novalidate>
@@ -266,7 +271,7 @@
         <div>
           <p class="eyebrow">Kontakt</p>
           <h2>Bistro Hokej</h2>
-          <p class="contact-lead">Bistro / restaurace v lokalitě Polička, Dolní Předměstí. Tento web je nový návrh webu s online objednávkou.</p>
+          <p class="contact-lead">Asijské bistro / restaurace v lokalitě Polička, Dolní Předměstí. Tento web je nový návrh webu s online objednávkou.</p>
           <div class="contact-actions">
             <a class="btn btn-primary" href="https://mapy.com/zakladni?q=Vrchlick%C3%A9ho%2019%2C%20572%2001%20Poli%C4%8Dka" target="_blank" rel="noopener">Zobrazit na mapě</a>
             <a class="btn btn-secondary" href="tel:+420773685507">Zavolat</a>
@@ -300,8 +305,8 @@
 
     <section class="section seo-text">
       <div class="container">
-        <h2>Bistro Polička s objednávkou jídla s sebou</h2>
-        <p>Bistro Hokej Polička může mít vlastní rychlý web pro zákazníky, kteří hledají bistro Polička, restaurace Polička, oběd Polička nebo objednat jídlo Polička. Demo počítá s vyzvednutím v lokalitě Dolní Předměstí Polička a s jednoduchým procesem od výběru jídla po online platbu.</p>
+        <h2>Asijské bistro Polička s objednávkou jídla s sebou</h2>
+        <p>Bistro Hokej Polička může mít vlastní rychlý web pro zákazníky, kteří hledají asijské bistro Polička, bistro Polička, restaurace Polička, oběd Polička nebo objednat jídlo Polička. Demo počítá s vyzvednutím v lokalitě Dolní Předměstí Polička a s jednoduchým procesem od výběru jídla po online platbu.</p>
       </div>
     </section>
   </main>

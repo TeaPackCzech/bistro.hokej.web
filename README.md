@@ -1,17 +1,17 @@
 # Bistro Hokej Polička - demo web
 
-Statický demo web pro podnik **Bistro Hokej** v lokalitě Polička, Dolní Předměstí. Web je připravený jako prezentační návrh nové stránky s hlavní přidanou hodnotou: online objednávka jídla k vyzvednutí na místě.
+Statický demo web pro podnik **Bistro Hokej** v lokalitě Polička, Dolní Předměstí. Web je připravený jako prezentační návrh nové stránky pro asijské bistro s hlavní přidanou hodnotou: online objednávka jídla k vyzvednutí na místě.
 
 Veřejně ověřené údaje použité v demu:
 
 - Název: Bistro Hokej
-- Kategorie: bistro / restaurace
+- Kategorie: bistro / restaurace, v aktuálním návrhu vizuálně pojaté jako asijské bistro
 - Adresa: Vrchlického 19, 572 01 Polička, Dolní Předměstí
 - Telefon: +420 773 685 507
 - Otevírací doba: Po-Pá 9:30-22:00, So 10:00-22:00, Ne 10:00-21:00
 - Zdroj: Firmy.cz a další veřejné katalogové profily
 
-Menu v tomto repozitáři je **ukázkové demo menu**. Není prezentované jako skutečná aktuální nabídka podniku.
+Menu v tomto repozitáři je **ukázkové asijsky laděné demo menu**. Není prezentované jako skutečná aktuální nabídka podniku.
 
 ## Technologie
 
@@ -60,9 +60,10 @@ https://teapackczech.github.io/bistro.hokej.web/
 ## Co je hotové
 
 - Moderní responzivní landing page pro Bistro Hokej Polička
+- Asijsky laděná grafika bez fotek: wok miska, hůlky, jemný rýžový rastr a teplé červené akcenty
 - Sticky header s navigací a mobilním hamburger menu
 - Hero sekce s jasnou výzvou k objednávce
-- Ukázkové menu v kategoriích
+- Ukázkové asijské menu v kategoriích
 - Funkční košík
 - Přidání položek do košíku
 - Zvýšení a snížení počtu kusů

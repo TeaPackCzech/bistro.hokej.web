@@ -1,15 +1,15 @@
 const menuItems = [
-  { id: "kureci-smes-ryze", category: "main", categoryLabel: "Hlavní jídla", name: "Kuřecí směs s rýží", description: "Ukázková demo položka s jemnou omáčkou a dušenou rýží.", price: 159 },
-  { id: "smazene-nudle-zelenina", category: "main", categoryLabel: "Hlavní jídla", name: "Smažené nudle se zeleninou", description: "Demo návrh rychlého jídla s křupavou zeleninou.", price: 149 },
-  { id: "pikantni-masova-smes", category: "main", categoryLabel: "Hlavní jídla", name: "Pikantní masová směs", description: "Ukázková pikantnější varianta pro zákazníky, kteří chtějí výraznější chuť.", price: 169 },
-  { id: "zeleninove-nudle", category: "lunch", categoryLabel: "Rychlé obědy", name: "Zeleninové nudle", description: "Lehká demo porce vhodná na rychlý oběd s sebou.", price: 139 },
-  { id: "obedova-miska", category: "lunch", categoryLabel: "Rychlé obědy", name: "Obědová miska", description: "Ukázková miska s rýží, zeleninou a omáčkou dne.", price: 145 },
-  { id: "polevka-dne", category: "soup", categoryLabel: "Polévky", name: "Polévka dne", description: "Demo položka. Reálný druh polévky doplní provozovatel podle nabídky.", price: 49 },
-  { id: "vyvar-demo", category: "soup", categoryLabel: "Polévky", name: "Jemný vývar", description: "Bezpečná ukázková položka pro prezentaci polévkové nabídky.", price: 55 },
-  { id: "domaci-limonada", category: "drink", categoryLabel: "Nápoje", name: "Domácí limonáda", description: "Ukázkový nealko nápoj pro objednávkový systém.", price: 59 },
+  { id: "kureci-wok-ryze", category: "main", categoryLabel: "Hlavní jídla", name: "Kuřecí wok s jasmínovou rýží", description: "Ukázková demo položka s kuřecím masem, zeleninou a jemnou asijskou omáčkou.", price: 159 },
+  { id: "smazene-nudle-zelenina", category: "main", categoryLabel: "Hlavní jídla", name: "Smažené nudle se zeleninou", description: "Demo návrh rychlého wok jídla s křupavou zeleninou.", price: 149 },
+  { id: "pikantni-wok-miska", category: "main", categoryLabel: "Hlavní jídla", name: "Pikantní wok miska", description: "Ukázková pikantnější varianta pro zákazníky, kteří chtějí výraznější chuť.", price: 169 },
+  { id: "zeleninove-nudle", category: "lunch", categoryLabel: "Rychlé obědy", name: "Zeleninové nudle", description: "Lehká demo porce asijských nudlí vhodná na rychlý oběd s sebou.", price: 139 },
+  { id: "ryzova-miska", category: "lunch", categoryLabel: "Rychlé obědy", name: "Rýžová miska s omáčkou dne", description: "Ukázková miska s rýží, zeleninou a omáčkou podle denní nabídky.", price: 145 },
+  { id: "polevka-dne", category: "soup", categoryLabel: "Polévky", name: "Asijská polévka dne", description: "Demo položka. Reálný druh polévky doplní provozovatel podle nabídky.", price: 49 },
+  { id: "ostrokysela-demo", category: "soup", categoryLabel: "Polévky", name: "Ostrokyselá polévka", description: "Bezpečná ukázková položka pro prezentaci asijské polévkové nabídky.", price: 55 },
+  { id: "limonada-zazvor", category: "drink", categoryLabel: "Nápoje", name: "Zázvorová limonáda", description: "Ukázkový nealko nápoj, který se hodí k asijsky laděnému menu.", price: 59 },
   { id: "cola-nealko", category: "drink", categoryLabel: "Nápoje", name: "Cola / nealko", description: "Demo položka pro běžné balené nealkoholické nápoje.", price: 45 },
-  { id: "extra-ryze", category: "side", categoryLabel: "Extra přílohy", name: "Extra rýže", description: "Doplňková ukázková příloha k hlavním jídlům.", price: 35 },
-  { id: "extra-omacka", category: "side", categoryLabel: "Extra přílohy", name: "Extra omáčka", description: "Demo příplatek pro zákazníky, kteří chtějí omáčku navíc.", price: 25 }
+  { id: "extra-ryze", category: "side", categoryLabel: "Extra přílohy", name: "Extra jasmínová rýže", description: "Doplňková ukázková příloha k wok jídlům a miskám.", price: 35 },
+  { id: "extra-omacka", category: "side", categoryLabel: "Extra přílohy", name: "Extra asijská omáčka", description: "Demo příplatek pro zákazníky, kteří chtějí omáčku navíc.", price: 25 }
 ];
 
 const categoryTabs = document.querySelectorAll(".category-tab");
