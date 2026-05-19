@@ -1,34 +1,95 @@
-# Bistro Hokej Polička - demo web
+# Bistro Hokej Polička - premium asian demo web
 
-Statický demo web pro podnik **Bistro Hokej** v lokalitě Polička, Dolní Předměstí. Web je připravený jako prezentační návrh nové stránky pro asijské bistro s hlavní přidanou hodnotou: online objednávka jídla k vyzvednutí na místě.
+Statický demo web pro **moderní asijské Bistro Hokej** v Poličce. Návrh je postavený jako prémiový cinematic restaurant web inspirovaný sushi bary, ramen bistry, Tokyo nightlife estetikou a moderním Webflow/BentoBox UX.
 
-Veřejně ověřené údaje použité v demu:
+Demo zachovává hlavní byznysovou funkci: **online objednávku jídla k vyzvednutí na místě**.
+
+## Veřejně ověřené údaje
 
 - Název: Bistro Hokej
-- Kategorie: bistro / restaurace, v aktuálním návrhu vizuálně pojaté jako asijské bistro
-- Adresa: Vrchlického 19, 572 01 Polička, Dolní Předměstí
+- Lokalita: Polička, Dolní Předměstí
+- Adresa: Vrchlického 19, 572 01 Polička
 - Telefon: +420 773 685 507
 - Otevírací doba: Po-Pá 9:30-22:00, So 10:00-22:00, Ne 10:00-21:00
-- Zdroj: Firmy.cz a další veřejné katalogové profily
+- Zdroj: veřejné katalogové profily včetně Firmy.cz
 
-Menu v tomto repozitáři je **ukázkové asijsky laděné demo menu**. Není prezentované jako skutečná aktuální nabídka podniku.
+Menu, recenze, rezervace a online platba jsou demo prvky. Reálná nabídka, ceny, alergeny, sociální sítě a platební brána se doplní před ostrým spuštěním.
 
 ## Technologie
 
-- HTML
-- CSS
-- JavaScript
+- HTML5
+- Moderní CSS bez buildu
+- Vanilla JavaScript
+- GSAP + ScrollTrigger přes CDN
+- Lenis smooth scrolling přes CDN
+- JSON menu data
+- GitHub Pages ready
+- Bez WordPressu
 - Bez Reactu
-- Bez Node.js
-- Bez buildu
 - Bez databáze
-- Připraveno pro GitHub Pages
+
+## Struktura
+
+```text
+.
+├── index.html
+├── style.css
+├── script.js
+├── data/
+│   └── menu.json
+├── robots.txt
+├── sitemap.xml
+└── README.md
+```
+
+## Co web obsahuje
+
+- Fullscreen cinematic hero
+- Ambient smoke, particles, cursor glow a chopstick cursor efekt
+- Video hero variantu přes animovanou CSS scénu
+- Dark/light mode toggle
+- Luxury featured specialities
+- Storytelling sekci o podniku
+- Interaktivní menu načítané z `data/menu.json`
+- Kategorie Sushi, Ramen, Wok, Bao, Bubble Tea, Dezerty
+- Funkční košík
+- Přidání do košíku, změna množství a odebrání položky
+- Objednávkový formulář
+- Validace jména, telefonu a času vyzvednutí
+- Demo platební modal
+- Simulace úspěšné platby
+- Gallery masonry grid
+- Testimonial carousel
+- Rezervační demo formulář
+- Kontaktní blok s telefonem, mapou a otevírací dobou
+- Sticky floating mobile order bar
+- SEO metadata, Open Graph, Schema.org Restaurant
+- `robots.txt` a `sitemap.xml`
+
+## Jak upravit menu
+
+Menu je oddělené v souboru:
+
+```text
+data/menu.json
+```
+
+Každá položka má:
+
+- `id`
+- `category`
+- `categoryLabel`
+- `name`
+- `description`
+- `price`
+- `image`
+- `badge`
+
+Provozovatel tak může měnit ceny, názvy jídel, obrázky i kategorie bez zásahu do HTML.
 
 ## Jak spustit lokálně
 
-Stačí otevřít soubor `index.html` v prohlížeči.
-
-Volitelně lze spustit jednoduchý lokální server:
+Kvůli načítání JSON souboru doporučuji spustit jednoduchý lokální server:
 
 ```bash
 python3 -m http.server 8080
@@ -40,105 +101,54 @@ Poté otevřít:
 http://127.0.0.1:8080/
 ```
 
-## Jak nasadit na GitHub Pages
+## Nasazení na GitHub Pages
 
-V repozitáři na GitHubu:
+GitHub Pages:
 
-1. Otevřít `Settings`.
-2. Přejít do `Pages`.
-3. Nastavit `Source` na `Deploy from a branch`.
-4. Nastavit `Branch` na `main`.
-5. Nastavit složku na `/root`.
-6. Uložit.
+- Source: Deploy from branch
+- Branch: `main`
+- Folder: `/root`
 
-Předpokládaná demo URL:
+Demo URL:
 
 ```text
 https://teapackczech.github.io/bistro.hokej.web/
 ```
 
-## Co je hotové
+## Online platba v ostré verzi
 
-- Moderní responzivní landing page pro Bistro Hokej Polička
-- Asijsky laděná grafika bez fotek: wok miska, hůlky, jemný rýžový rastr a teplé červené akcenty
-- Sticky header s navigací a mobilním hamburger menu
-- Hero sekce s jasnou výzvou k objednávce
-- Ukázkové asijské menu v kategoriích
-- Funkční košík
-- Přidání položek do košíku
-- Zvýšení a snížení počtu kusů
-- Odebrání položky z košíku
-- Automatický výpočet celkové ceny
-- Objednávkový formulář
-- Validace jména, telefonu a času vyzvednutí
-- Volby vyzvednutí včetně vlastního času
-- Demo platební modal
-- Simulace úspěšné platby
-- Potvrzení přijetí objednávky
-- Sticky košík na desktopu
-- Mobilní spodní lišta s tlačítkem Košík
-- SEO title, meta description, Open Graph a lokální SEO text
-- Schema.org Restaurant JSON-LD
-- Kontaktní sekce s mapou a telefonním tlačítkem
+GitHub Pages neumí bezpečně vytvářet platební session. Pro ostrý provoz je potřeba backend.
 
-## Co je demo
+Doporučený tok:
 
-- Položky menu
-- Ceny
-- Online platba
-- Přijetí objednávky
-- Odesílání objednávky provozovateli
-- Potvrzení e-mailem
-- Administrace objednávek
+1. Frontend odešle objednávku na backend endpoint `POST /api/create-payment`.
+2. Backend vytvoří platební session u Stripe Checkout, GoPay nebo Comgate.
+3. Backend vrátí `checkoutUrl`.
+4. Frontend přesměruje zákazníka na platební bránu.
+5. Platební brána po zaplacení zavolá webhook.
+6. Backend odešle potvrzení provozovateli a zákazníkovi.
 
-Tyto části jsou připravené jako frontendový návrh, aby bylo možné web ukázat provozovateli. Pro ostrý provoz je potřeba doplnit reálné menu a backend.
-
-## Jak napojit reálnou online platbu
-
-GitHub Pages je statický hosting a neumí bezpečně vytvářet platební session přímo z frontendového JavaScriptu. Pro ostrou platbu je potřeba backend.
-
-Doporučený postup:
-
-1. Zvolit platební bránu: Stripe Checkout, GoPay nebo Comgate.
-2. Založit merchant účet u poskytovatele platby.
-3. Vytvořit backend endpoint, například:
-
-```text
-POST /api/create-payment
-```
-
-4. Frontend odešle objednávku na backend.
-5. Backend vytvoří platební session u Stripe / GoPay / Comgate.
-6. Backend vrátí `checkoutUrl`.
-7. Frontend zákazníka přesměruje na platební bránu.
-8. Po zaplacení platební brána zavolá webhook na backend.
-9. Backend označí objednávku jako zaplacenou a pošle potvrzení.
-
-V souboru `script.js` je pro budoucí napojení připravená funkce:
+V `script.js` je připravená funkce:
 
 ```js
 createPaymentSession()
 ```
 
-Uvnitř je komentář s místem, kde se později zavolá backend endpoint `/api/create-payment`, a ukázkový JSON payload objednávky.
+Obsahuje místo pro budoucí napojení `/api/create-payment` a ukázkový payload objednávky.
 
-## Jak napojit reálné odesílání objednávek
+## Co je potřeba doplnit před ostrým spuštěním
 
-Pro ostré spuštění je potřeba doplnit jednu z těchto variant:
+- Reálné menu
+- Ceny
+- Alergeny
+- Skutečné fotografie podniku a jídel
+- Instagram a Facebook odkazy
+- Rezervační backend
+- Objednávkový backend
+- Platební brána
+- E-mailové potvrzení objednávek
+- Právní texty podle ostrého provozu
 
-- Odeslání objednávky e-mailem provozovateli
-- Uložení objednávky do administrace
-- Notifikace do mobilu nebo tabletu na provozovně
-- Tisk objednávky na kuchyňské tiskárně
-- Napojení na pokladní systém, pokud ho podnik používá
+## Doporučený další krok
 
-Minimální ostrá varianta:
-
-1. Backend přijme objednávku.
-2. Backend ověří platbu.
-3. Backend odešle e-mail provozovateli.
-4. Backend odešle potvrzení zákazníkovi.
-
-## Doporučený další krok pro klienta
-
-Nejdříve doplnit reálné menu, ceny, alergeny, aktuální otevírací dobu a potvrdit preferovanou platební bránu. Poté se může připravit ostrá verze s backendem pro platby, příjem objednávek a potvrzovací e-maily.
+Schválit vizuální směr, dodat reálné menu a fotky, zvolit platební bránu a připravit backend pro objednávky a notifikace provozovně.

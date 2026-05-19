@@ -1,25 +1,31 @@
 <!doctype html>
-<html lang="cs">
+<html lang="cs" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bistro Hokej Polička | Asijské bistro a jídlo k vyzvednutí</title>
-  <meta name="description" content="Demo návrh moderního asijského webu pro Bistro Hokej Polička. Přehledné wok menu, online objednávka jídla s sebou a připravený platební krok pro vyzvednutí na místě.">
-  <meta name="keywords" content="Bistro Hokej Polička, asijské bistro Polička, bistro Polička, restaurace Polička, jídlo s sebou Polička, objednat jídlo Polička, oběd Polička, Dolní Předměstí Polička">
-  <meta name="theme-color" content="#a20f18">
+  <title>Bistro Hokej Polička | Premium asian food, sushi, ramen a wok</title>
+  <meta name="description" content="Prémiový demo web pro moderní asijské Bistro Hokej v Poličce. Sushi, ramen, wok, bao, bubble tea, online objednávka a vyzvednutí na místě.">
+  <meta name="keywords" content="asijské bistro Polička, sushi Polička, ramen Polička, wok Polička, asian food Polička, Bistro Hokej Polička, objednat jídlo Polička">
+  <meta name="theme-color" content="#050505">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Bistro Hokej Polička | Asijské demo bistro s online objednávkou">
-  <meta property="og:description" content="Moderní asijsky laděný prezentační web pro Bistro Hokej v Poličce s demo objednávkou jídla k vyzvednutí.">
+  <meta property="og:title" content="Bistro Hokej Polička | Premium asian bistro">
+  <meta property="og:description" content="Cinematic demo web pro asijské bistro v Poličce s online objednávkou k vyzvednutí.">
   <meta property="og:url" content="https://teapackczech.github.io/bistro.hokej.web/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80">
   <meta property="og:locale" content="cs_CZ">
   <link rel="canonical" href="https://teapackczech.github.io/bistro.hokej.web/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Bistro Hokej",
-    "description": "Asijsky laděné bistro / restaurace v lokalitě Polička, Dolní Předměstí. Demo web s připravenou online objednávkou jídla k vyzvednutí.",
+    "description": "Moderní asijské bistro v Poličce s demo webem pro online objednávku jídla k vyzvednutí.",
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Vrchlického 19",
@@ -29,7 +35,7 @@
       "addressCountry": "CZ"
     },
     "telephone": "+420773685507",
-    "servesCuisine": ["Asian", "Bistro"],
+    "servesCuisine": ["Asian", "Sushi", "Ramen", "Wok", "Bistro"],
     "priceRange": "$$",
     "url": "https://teapackczech.github.io/bistro.hokej.web/",
     "openingHoursSpecification": [
@@ -46,297 +52,285 @@
   </script>
 </head>
 <body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">一</div>
+    <p>Bistro Hokej</p>
+  </div>
+
   <a class="skip-link" href="#main">Přejít na obsah</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="chopstick-cursor" id="chopstick-cursor" aria-hidden="true"></div>
+  <div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Bistro Hokej domů">
-        <span class="brand-mark" aria-hidden="true">BH</span>
-        <span>Bistro Hokej</span>
+        <span class="brand-mark">BH</span>
+        <span class="brand-copy">
+          <strong>Bistro Hokej</strong>
+          <small>Asian kitchen / Polička</small>
+        </span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
+        <a href="#speciality">Speciality</a>
         <a href="#menu">Menu</a>
-        <a href="#objednat">Objednat</a>
-        <a href="#jak-to-funguje">Jak to funguje</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#rezervace">Kontakt</a>
       </nav>
-      <a class="btn btn-primary header-cta" href="#objednat">Objednat jídlo</a>
+      <div class="header-actions">
+        <button class="mode-toggle" id="mode-toggle" type="button" aria-label="Přepnout dark/light režim">LIGHT</button>
+        <a class="btn btn-primary header-cta" href="#objednat">Objednat</a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Asijské bistro v Poličce</p>
-          <h1>Bistro Hokej Polička</h1>
-          <p class="hero-lead">Rychlé asijské jídlo k vyzvednutí. Objednejte online, zaplaťte kartou a vyzvedněte na místě bez čekání.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-large" href="#objednat">Objednat k vyzvednutí</a>
-            <a class="btn btn-secondary btn-large" href="#menu">Zobrazit menu</a>
-          </div>
-          <div class="benefits" aria-label="Hlavní benefity">
-            <span>Asijské wok menu</span>
-            <span>Objednávka online</span>
-            <span>Vyzvednutí na místě</span>
-            <span>Platba kartou připravena</span>
-          </div>
+    <section class="hero snap-section" id="hero">
+      <div class="hero-media hero-media-static" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1800&q=82" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-media hero-media-video" aria-hidden="true">
+        <div class="video-orb orb-one"></div>
+        <div class="video-orb orb-two"></div>
+        <div class="video-noodles"></div>
+      </div>
+      <div class="smoke-layer" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container hero-content">
+        <p class="kicker reveal">Polička / Dolní Předměstí</p>
+        <h1 class="reveal">Tokyo night energy. Asian street food elevated.</h1>
+        <p class="hero-lead reveal">Sushi, ramen, wok a bao v prémiovém digitálním zážitku. Objednejte online, zaplaťte kartou a vyzvedněte bez čekání.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary btn-large magnetic" href="#objednat">Objednat</a>
+          <a class="btn btn-ghost btn-large magnetic" href="#menu">Menu</a>
+          <a class="btn btn-outline btn-large magnetic" href="#rezervace">Rezervace</a>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="bowl-card">
-            <div class="chopsticks"></div>
-            <div class="bowl">
-              <span class="steam steam-one"></span>
-              <span class="steam steam-two"></span>
-              <span class="steam steam-three"></span>
-              <span class="noodle noodle-one"></span>
-              <span class="noodle noodle-two"></span>
-              <span class="ingredient dot-one"></span>
-              <span class="ingredient dot-two"></span>
-              <span class="ingredient dot-three"></span>
-              <span class="ingredient leaf-one"></span>
-            </div>
-            <div class="ticket">
-              <span>Wok • nudle • rýže</span>
-              <strong>Asie s sebou bez čekání</strong>
-            </div>
-          </div>
+        <div class="hero-meta reveal" aria-label="Hlavní výhody">
+          <span>Premium asian fusion</span>
+          <span>Takeaway ready</span>
+          <span>Card payment demo</span>
         </div>
       </div>
+      <button class="video-toggle" id="video-toggle" type="button">Video hero mode</button>
+      <a class="scroll-cue" href="#speciality" aria-label="Pokračovat na speciality">Scroll</a>
     </section>
 
-    <section class="section intro-band">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow">Asijský gastro web</p>
-          <h2>Vizuál, který hned připomene wok, nudle a rychlý oběd s sebou.</h2>
-        </div>
-        <p>Demo je navržené pro asijské bistro v Poličce: rychlé načtení, přehledné menu, objednávka k vyzvednutí a připravený platební krok pro Stripe, GoPay nebo Comgate v ostré verzi.</p>
-      </div>
-    </section>
-
-    <section class="section" id="menu">
+    <section class="section specialities snap-section" id="speciality">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Ukázkové asijské demo menu</p>
-          <h2>Wok menu k rychlé objednávce</h2>
-          <p>Položky níže jsou pouze návrh pro prezentaci. Reálná nabídka, alergeny a ceny budou doplněny provozovatelem.</p>
+        <div class="section-heading reveal">
+          <p class="kicker">Featured specialities</p>
+          <h2>Signature plates, built for appetite.</h2>
+          <p>Luxusní demo prezentace jídel pro bistro, které nechce vypadat jako běžný český restaurant web.</p>
         </div>
-        <div class="menu-tabs" role="tablist" aria-label="Kategorie menu">
-          <button class="category-tab is-active" type="button" data-category="all">Vše</button>
-          <button class="category-tab" type="button" data-category="main">Hlavní jídla</button>
-          <button class="category-tab" type="button" data-category="lunch">Rychlé obědy</button>
-          <button class="category-tab" type="button" data-category="soup">Polévky</button>
-          <button class="category-tab" type="button" data-category="drink">Nápoje</button>
-          <button class="category-tab" type="button" data-category="side">Extra přílohy</button>
+        <div class="speciality-grid">
+          <article class="speciality-card reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=80" alt="Ukázková sushi specialita">
+            <div><span>Sushi</span><h3>Cold precision</h3></div>
+          </article>
+          <article class="speciality-card tall reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80" alt="Ukázkový ramen bowl">
+            <div><span>Ramen</span><h3>Steam ritual</h3></div>
+          </article>
+          <article class="speciality-card reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80" alt="Ukázkové wok nudle">
+            <div><span>Wok</span><h3>Fire, soy, crunch</h3></div>
+          </article>
+          <article class="speciality-card reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=900&q=80" alt="Ukázkový bubble tea">
+            <div><span>Bubble tea</span><h3>Night market sweet</h3></div>
+          </article>
+          <article class="speciality-card reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80" alt="Ukázková poke bowl">
+            <div><span>Poke bowls</span><h3>Fresh neon bowl</h3></div>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section story snap-section" id="o-podniku">
+      <div class="container story-grid">
+        <div class="story-copy reveal">
+          <p class="kicker">O podniku</p>
+          <h2>Asian street food, reimagined for Polička.</h2>
+          <p>Koncept webu staví Bistro Hokej jako moderní asijské místo s čerstvými surovinami, rychlým výdejem a atmosférou, která působí prémiově už při prvním scrollu.</p>
+          <p>Vizuál je tmavý, filmový a minimalistický: méně vysvětlování, více chuti, kontrastu a jasných akcí.</p>
+        </div>
+        <div class="story-panel reveal">
+          <span>Fresh</span>
+          <span>Fast</span>
+          <span>Night</span>
+          <span>Polička</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section snap-section" id="menu">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker">Interactive menu</p>
+          <h2>Choose your craving.</h2>
+          <p>Menu je načítané z JSON souboru. Položky jsou demo a provozovatel je může snadno vyměnit za reálné.</p>
+        </div>
+        <div class="menu-tabs reveal" id="menu-tabs" role="tablist" aria-label="Kategorie menu"></div>
         <div class="menu-grid" id="menu-items" aria-live="polite"></div>
       </div>
     </section>
 
-    <section class="section order-section" id="objednat">
+    <section class="section order-section snap-section" id="objednat">
       <div class="container order-layout">
-        <div class="order-main">
-          <div class="section-heading align-left">
-            <p class="eyebrow">Online objednávka</p>
-            <h2>Objednat jídlo k vyzvednutí</h2>
-            <p>Vyberte nudle, rýžovou misku nebo polévku z demo menu, zadejte kontakt a projděte ukázkovým platebním krokem.</p>
-          </div>
-
-          <form class="order-form" id="order-form" novalidate>
-            <fieldset>
-              <legend>Kontakt zákazníka</legend>
-              <div class="form-grid">
-                <label>
-                  Jméno
-                  <input id="customer-name" name="name" type="text" autocomplete="name" required placeholder="Jan Novák">
-                </label>
-                <label>
-                  Telefon
-                  <input id="customer-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+420 777 000 000">
-                </label>
-                <label>
-                  E-mail volitelně
-                  <input id="customer-email" name="email" type="email" autocomplete="email" placeholder="jan@example.cz">
-                </label>
-              </div>
-            </fieldset>
-
+        <div class="order-main reveal">
+          <p class="kicker">Takeaway order</p>
+          <h2>Objednat k vyzvednutí.</h2>
+          <p>Frontend objednávka zůstává zachovaná: košík, množství, kontakt, čas vyzvednutí a demo online platba.</p>
+          <form class="order-form glass" id="order-form" novalidate>
+            <div class="form-grid">
+              <label>Jméno<input id="customer-name" name="name" type="text" autocomplete="name" required placeholder="Jan Novák"></label>
+              <label>Telefon<input id="customer-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+420 777 000 000"></label>
+              <label>E-mail volitelně<input id="customer-email" name="email" type="email" autocomplete="email" placeholder="jan@example.cz"></label>
+            </div>
             <fieldset>
               <legend>Čas vyzvednutí</legend>
               <div class="pickup-options" role="radiogroup" aria-label="Čas vyzvednutí">
-                <label><input type="radio" name="pickup" value="Co nejdříve" required> Co nejdříve</label>
-                <label><input type="radio" name="pickup" value="Za 20 minut"> Za 20 minut</label>
-                <label><input type="radio" name="pickup" value="Za 30 minut"> Za 30 minut</label>
-                <label><input type="radio" name="pickup" value="Za 45 minut"> Za 45 minut</label>
+                <label><input type="radio" name="pickup" value="Co nejdříve" required> ASAP</label>
+                <label><input type="radio" name="pickup" value="Za 20 minut"> 20 min</label>
+                <label><input type="radio" name="pickup" value="Za 30 minut"> 30 min</label>
+                <label><input type="radio" name="pickup" value="Za 45 minut"> 45 min</label>
                 <label><input type="radio" name="pickup" value="Vlastní čas" id="pickup-custom-radio"> Vlastní čas</label>
               </div>
-              <label class="custom-time is-hidden" id="custom-time-wrap">
-                Vlastní čas
-                <input id="pickup-custom-time" name="pickupCustomTime" type="time">
-              </label>
+              <label class="custom-time is-hidden" id="custom-time-wrap">Vlastní čas<input id="pickup-custom-time" name="pickupCustomTime" type="time"></label>
             </fieldset>
-
-            <label>
-              Poznámka k objednávce
-              <textarea id="order-note" name="note" rows="4" placeholder="Například méně pálivé, bez cibule..."></textarea>
-            </label>
-
+            <label>Poznámka<textarea id="order-note" name="note" rows="4" placeholder="Například méně chilli, bez koriandru..."></textarea></label>
             <div class="form-actions">
-              <button class="btn btn-primary btn-large" id="checkout-button" type="submit">Zaplatit kartou online</button>
+              <button class="btn btn-primary btn-large magnetic" id="checkout-button" type="submit">Zaplatit kartou online</button>
               <p class="form-hint" id="form-message" role="status" aria-live="polite">Nejdříve přidejte alespoň jednu položku do košíku.</p>
             </div>
           </form>
         </div>
-
-        <aside class="cart-panel" aria-labelledby="cart-title">
+        <aside class="cart-panel glass reveal" aria-labelledby="cart-title">
           <div class="cart-header">
-            <div>
-              <p class="eyebrow">Košík</p>
-              <h2 id="cart-title">Vaše objednávka</h2>
-            </div>
+            <div><p class="kicker">Košík</p><h2 id="cart-title">Your order</h2></div>
             <span class="cart-count" id="cart-count">0</span>
           </div>
           <div class="cart-empty" id="cart-empty">
-            <strong>Košík je zatím prázdný</strong>
-            <p>Vyberte si položku z demo menu a přidejte ji do objednávky.</p>
+            <strong>Košík je prázdný</strong>
+            <p>Vyberte sushi, ramen nebo wok z menu a přidejte jej do objednávky.</p>
           </div>
           <div class="cart-items" id="cart-items"></div>
-          <div class="cart-total">
-            <span>Celkem</span>
-            <strong id="cart-total">0 Kč</strong>
-          </div>
-          <a class="btn btn-secondary full-width" href="#menu">Přidat další jídlo</a>
+          <div class="cart-total"><span>Celkem</span><strong id="cart-total">0 Kč</strong></div>
+          <a class="btn btn-outline full-width" href="#menu">Přidat další jídlo</a>
         </aside>
       </div>
     </section>
 
-    <section class="section steps" id="jak-to-funguje">
+    <section class="section gallery snap-section" id="galerie">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Jak to funguje</p>
-          <h2>Čtyři kroky bez čekání u telefonu</h2>
+        <div class="section-heading reveal">
+          <p class="kicker">Gallery</p>
+          <h2>Instagram-grade mood.</h2>
         </div>
-        <div class="steps-grid">
-          <article class="step-card">
-            <span>01</span>
-            <h3>Vyberete jídlo</h3>
-            <p>Zákazník projde menu a přidá položky do košíku.</p>
-          </article>
-          <article class="step-card">
-            <span>02</span>
-            <h3>Zadáte kontakt a čas</h3>
-            <p>Formulář pohlídá jméno, telefon a požadované vyzvednutí.</p>
-          </article>
-          <article class="step-card">
-            <span>03</span>
-            <h3>Zaplatíte online kartou</h3>
-            <p>Ostrá verze přesměruje na zabezpečenou platební bránu.</p>
-          </article>
-          <article class="step-card">
-            <span>04</span>
-            <h3>Vyzvednete v Bistru Hokej</h3>
-            <p>Objednávka je připravená na místě ve zvoleném čase.</p>
-          </article>
+        <div class="masonry">
+          <figure class="reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=80" alt="Sushi detail"><figcaption>Sushi detail</figcaption></figure>
+          <figure class="wide reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80" alt="Ramen bowl"><figcaption>Ramen steam</figcaption></figure>
+          <figure class="reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80" alt="Nudle z woku"><figcaption>Wok fire</figcaption></figure>
+          <figure class="tall reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=900&q=80" alt="Bubble tea"><figcaption>Bubble tea</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="section owner-section">
-      <div class="container owner-grid">
-        <div>
-          <p class="eyebrow">Pro provozovatele</p>
-          <h2>Objednávky přímo přes vlastní web</h2>
-          <p>Vlastní web může být jednoduchý, rychlý a obchodně užitečný. Neřeší jen prezentaci, ale i reálné objednávky s přímým kontaktem na zákazníka.</p>
+    <section class="section testimonials snap-section" id="recenze">
+      <div class="container testimonial-grid">
+        <div class="reveal">
+          <p class="kicker">Reviews</p>
+          <h2>Luxury feeling. Local speed.</h2>
         </div>
-        <ul class="owner-list">
-          <li>Zákazník nemusí hledat telefon</li>
-          <li>Menu je přehledně online</li>
-          <li>Objednávka přijde přímo provozovateli</li>
-          <li>Možnost platby předem</li>
-          <li>Méně čekání u pultu</li>
-          <li>Nezávislost na cizích platformách</li>
-          <li>Lepší dohledatelnost na Googlu</li>
-        </ul>
+        <div class="testimonial-carousel glass reveal" id="testimonial-carousel" aria-live="polite">
+          <article class="testimonial is-active">
+            <p>„Konečně bistro web, který vypadá jako značka. Menu je rychlé, jasné a objednávka dává smysl.“</p>
+            <strong>Demo zákazník</strong>
+          </article>
+          <article class="testimonial">
+            <p>„Tmavý vizuál, fotky a mikroanimace působí jako moderní podnik z velkého města.“</p>
+            <strong>UX preview</strong>
+          </article>
+          <article class="testimonial">
+            <p>„Objednávka k vyzvednutí je přesně to, co lokální gastro potřebuje.“</p>
+            <strong>Takeaway koncept</strong>
+          </article>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="kontakt">
+    <section class="section contact-section snap-section" id="rezervace">
       <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Kontakt</p>
-          <h2>Bistro Hokej</h2>
-          <p class="contact-lead">Asijské bistro / restaurace v lokalitě Polička, Dolní Předměstí. Tento web je nový návrh webu s online objednávkou.</p>
+        <div class="contact-copy reveal">
+          <p class="kicker">Rezervace / Kontakt</p>
+          <h2>Bistro Hokej Polička</h2>
+          <p>Vrchlického 19, 572 01 Polička, Dolní Předměstí. Veřejně dohledané kontakty jsou použité pro demo; sociální sítě doplní provozovatel.</p>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="https://mapy.com/zakladni?q=Vrchlick%C3%A9ho%2019%2C%20572%2001%20Poli%C4%8Dka" target="_blank" rel="noopener">Zobrazit na mapě</a>
-            <a class="btn btn-secondary" href="tel:+420773685507">Zavolat</a>
-            <a class="btn btn-secondary" href="#objednat">Objednat jídlo</a>
+            <a class="btn btn-primary magnetic" href="tel:+420773685507">Zavolat</a>
+            <a class="btn btn-outline magnetic" href="https://mapy.com/zakladni?q=Vrchlick%C3%A9ho%2019%2C%20572%2001%20Poli%C4%8Dka" target="_blank" rel="noopener">Mapa</a>
+            <a class="btn btn-ghost magnetic" href="#objednat">Objednat</a>
           </div>
+          <dl class="contact-list">
+            <div><dt>Telefon</dt><dd>+420 773 685 507</dd></div>
+            <div><dt>Otevírací doba</dt><dd>Po-Pá 9:30-22:00, So 10:00-22:00, Ne 10:00-21:00</dd></div>
+            <div><dt>Instagram</dt><dd>Doplnit provozovatelem</dd></div>
+            <div><dt>Facebook</dt><dd>Doplnit provozovatelem</dd></div>
+          </dl>
         </div>
-        <dl class="contact-card">
-          <div>
-            <dt>Adresa</dt>
-            <dd>Vrchlického 19, 572 01 Polička, Dolní Předměstí</dd>
+        <form class="reservation-form glass reveal" id="reservation-form">
+          <h3>Rezervační poptávka</h3>
+          <label>Jméno<input type="text" name="reservationName" placeholder="Vaše jméno"></label>
+          <label>Telefon<input type="tel" name="reservationPhone" placeholder="+420 777 000 000"></label>
+          <div class="form-grid small">
+            <label>Datum<input type="date" name="reservationDate"></label>
+            <label>Čas<input type="time" name="reservationTime"></label>
           </div>
-          <div>
-            <dt>Telefon</dt>
-            <dd><a href="tel:+420773685507">+420 773 685 507</a></dd>
-          </div>
-          <div>
-            <dt>Otevírací doba</dt>
-            <dd>Po-Pá 9:30-22:00, So 10:00-22:00, Ne 10:00-21:00</dd>
-          </div>
-          <div>
-            <dt>Web</dt>
-            <dd>Nový návrh webu</dd>
-          </div>
-          <div>
-            <dt>Zdroj veřejných údajů</dt>
-            <dd>Firmy.cz a veřejné katalogové profily. Menu je ukázkové demo.</dd>
-          </div>
-        </dl>
+          <label>Počet osob<input type="number" name="reservationPeople" min="1" max="20" placeholder="2"></label>
+          <button class="btn btn-primary full-width" type="submit">Odeslat demo poptávku</button>
+          <p class="form-hint" id="reservation-message">Demo formulář. Ostrá verze odešle rezervaci provozovateli.</p>
+        </form>
       </div>
     </section>
 
     <section class="section seo-text">
-      <div class="container">
-        <h2>Asijské bistro Polička s objednávkou jídla s sebou</h2>
-        <p>Bistro Hokej Polička může mít vlastní rychlý web pro zákazníky, kteří hledají asijské bistro Polička, bistro Polička, restaurace Polička, oběd Polička nebo objednat jídlo Polička. Demo počítá s vyzvednutím v lokalitě Dolní Předměstí Polička a s jednoduchým procesem od výběru jídla po online platbu.</p>
+      <div class="container reveal">
+        <h2>Asijské bistro Polička: sushi, ramen, wok a takeaway objednávky</h2>
+        <p>Bistro Hokej Polička může cílit na lokální hledání jako asijské bistro Polička, sushi Polička, ramen Polička, wok Polička nebo asian food Polička. Web je připravený pro objednávku jídla k vyzvednutí, pozdější online platbu a lepší dohledatelnost na Googlu.</p>
       </div>
     </section>
   </main>
 
-  <div class="mobile-cart-bar" aria-hidden="false">
-    <button class="btn btn-primary full-width" type="button" id="mobile-cart-button">
-      Košík <span id="mobile-cart-total">0 Kč</span>
-    </button>
+  <div class="mobile-order-bar">
+    <button class="btn btn-primary full-width" type="button" id="mobile-cart-button">Košík <span id="mobile-cart-total">0 Kč</span></button>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <div class="modal-backdrop" id="payment-modal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+    <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="payment-title">
       <button class="modal-close" type="button" id="modal-close" aria-label="Zavřít platební okno">×</button>
-      <p class="eyebrow">Platební krok</p>
+      <p class="kicker">Secure checkout demo</p>
       <h2 id="payment-title">Demo platební brána</h2>
       <div class="payment-summary" id="payment-summary"></div>
       <p>V ostré verzi bude zákazník přesměrován na zabezpečenou platební bránu Stripe / GoPay / Comgate.</p>
       <div class="modal-actions">
         <button class="btn btn-primary" type="button" id="simulate-payment">Simulovat úspěšnou platbu</button>
-        <button class="btn btn-secondary" type="button" id="modal-cancel">Zpět k objednávce</button>
+        <button class="btn btn-outline" type="button" id="modal-cancel">Zpět</button>
       </div>
     </div>
   </div>
 
   <div class="modal-backdrop" id="success-modal" aria-hidden="true">
-    <div class="modal success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <div class="modal glass success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
       <button class="modal-close" type="button" id="success-close" aria-label="Zavřít potvrzení">×</button>
-      <p class="eyebrow">Objednávka přijata</p>
+      <p class="kicker">Order accepted</p>
       <h2 id="success-title">Objednávka byla přijata.</h2>
       <p>Připravíme ji k vyzvednutí ve zvoleném čase.</p>
       <a class="btn btn-primary" href="#menu" id="new-order">Vytvořit novou objednávku</a>
@@ -345,11 +339,14 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p><strong>Bistro Hokej Polička</strong> - demo prezentační web s online objednávkou.</p>
-      <p>Tento web je ukázkový návrh. Reálné menu, ceny, otevírací doba a platební brána budou doplněny před ostrým spuštěním.</p>
+      <p><strong>Bistro Hokej Polička</strong> - prémiový demo web pro moderní asijské bistro s online objednávkou.</p>
+      <p>Tento web je ukázkový návrh. Reálné menu, ceny, sociální sítě, rezervace a platební brána budou doplněny před ostrým spuštěním.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

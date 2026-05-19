@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "id": "tokyo-salmon-set",
+      "category": "sushi",
+      "categoryLabel": "Sushi",
+      "name": "Tokyo Salmon Set",
+      "description": "Demo sushi set s lososem, sezamem a jemnou citrusovou omáčkou.",
+      "price": 249,
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=80",
+      "badge": "Signature"
+    },
+    {
+      "id": "midnight-maki",
+      "category": "sushi",
+      "categoryLabel": "Sushi",
+      "name": "Midnight Maki",
+      "description": "Ukázkové maki rolky pro prémiovou prezentaci sushi nabídky.",
+      "price": 189,
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=70",
+      "badge": "Cold"
+    },
+    {
+      "id": "shoyu-ramen",
+      "category": "ramen",
+      "categoryLabel": "Ramen",
+      "name": "Shoyu Ramen Bowl",
+      "description": "Ukázkový ramen s vývarem, nudlemi, vejcem a jarní cibulkou.",
+      "price": 219,
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80",
+      "badge": "Steam"
+    },
+    {
+      "id": "spicy-miso-ramen",
+      "category": "ramen",
+      "categoryLabel": "Ramen",
+      "name": "Spicy Miso Ramen",
+      "description": "Demo pikantní ramen miska s miso profilem a chilli olejem.",
+      "price": 229,
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=70",
+      "badge": "Spicy"
+    },
+    {
+      "id": "neon-wok",
+      "category": "wok",
+      "categoryLabel": "Wok",
+      "name": "Neon Chicken Wok",
+      "description": "Kuřecí wok, zelenina, sójovo-zázvorová omáčka a jasmínová rýže.",
+      "price": 189,
+      "image": "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80",
+      "badge": "Hot"
+    },
+    {
+      "id": "veggie-noodle-wok",
+      "category": "wok",
+      "categoryLabel": "Wok",
+      "name": "Veggie Noodle Wok",
+      "description": "Demo smažené nudle se zeleninou, sezamem a omáčkou dne.",
+      "price": 169,
+      "image": "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=70",
+      "badge": "Fresh"
+    },
+    {
+      "id": "bao-duck",
+      "category": "bao",
+      "categoryLabel": "Bao",
+      "name": "Crispy Duck Bao",
+      "description": "Ukázková nadýchaná bao houska s křupavou náplní a zeleninou.",
+      "price": 139,
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80",
+      "badge": "Soft"
+    },
+    {
+      "id": "bao-tofu",
+      "category": "bao",
+      "categoryLabel": "Bao",
+      "name": "Tofu Bao",
+      "description": "Demo vegetariánská bao varianta s tofu, okurkou a pikantním dresinkem.",
+      "price": 129,
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=70",
+      "badge": "Veggie"
+    },
+    {
+      "id": "matcha-bubble",
+      "category": "bubble-tea",
+      "categoryLabel": "Bubble Tea",
+      "name": "Matcha Bubble Tea",
+      "description": "Ukázkový matcha nápoj s tapiokou pro moderní takeaway nabídku.",
+      "price": 99,
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=900&q=80",
+      "badge": "Sweet"
+    },
+    {
+      "id": "mango-bubble",
+      "category": "bubble-tea",
+      "categoryLabel": "Bubble Tea",
+      "name": "Mango Bubble Tea",
+      "description": "Demo ovocný bubble tea s mangem a perličkami.",
+      "price": 99,
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=900&q=70",
+      "badge": "Mango"
+    },
+    {
+      "id": "mochi-dessert",
+      "category": "dessert",
+      "categoryLabel": "Dezerty",
+      "name": "Mochi Dessert",
+      "description": "Ukázkový japonsky laděný dezert pro prémiovou prezentaci menu.",
+      "price": 89,
+      "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=62",
+      "badge": "Dessert"
+    },
+    {
+      "id": "sesame-cheesecake",
+      "category": "dessert",
+      "categoryLabel": "Dezerty",
+      "name": "Black Sesame Cake",
+      "description": "Demo dezert s černým sezamem, připravený jako prémiová položka.",
+      "price": 109,
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=900&q=62",
+      "badge": "Gold"
+    }
+  ]
+}
